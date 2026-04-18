@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: food-affordability
-        image: youssef75ensae/food-affordability:latest
+        image: youssef75ensae/food-affordability:v0.1.0
         imagePullPolicy: Always
         ports:
         - containerPort: 8501
