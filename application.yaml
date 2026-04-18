@@ -1,0 +1,16 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: food-affordability
+spec:
+  project: default
+  source:
+    repoURL: https://github.com/Youssef75ensae/application-deployment.git
+    targetRevision: main
+    path: deployment
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: user-django75
+  syncPolicy:
+    automated:
+      selfHeal: true
